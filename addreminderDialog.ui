@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>AddReminderDialog</class>
+    <widget class="QDialog" name="AddReminderDialog">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>300</width>
+                <height>250</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>添加提醒</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+                <layout class="QFormLayout" name="formLayout">
+                    <item row="0" column="0">
+                        <widget class="QLabel" name="label_date">
+                            <property name="text">
+                                <string>日期</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="0" column="1">
+                        <widget class="QDateEdit" name="dateEdit">
+                            <property name="calendarPopup">
+                                <bool>true</bool>
+                            </property>
+                            <property name="displayFormat">
+                                <string>yyyy-MM-dd</string>
+                            </property>
+                            <property name="date">
+                                <date>
+                                    <year>2024</year>
+                                    <month>6</month>
+                                    <day>5</day>
+                                </date>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="1" column="0">
+                        <widget class="QLabel" name="label_time">
+                            <property name="text">
+                                <string>时间</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="1" column="1">
+                        <widget class="QTimeEdit" name="timeEdit">
+                            <property name="displayFormat">
+                                <string>HH:mm</string>
+                            </property>
+                            <property name="time">
+                                <time>
+                                    <hour>12</hour>
+                                    <minute>0</minute>
+                                </time>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="2" column="0">
+                        <widget class="QLabel" name="label_content">
+                            <property name="text">
+                                <string>内容</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="2" column="1">
+                        <widget class="QLineEdit" name="contentEdit">
+                            <property name="placeholderText">
+                                <string>请输入提醒内容</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="3" column="0">
+                        <widget class="QLabel" name="label_priority">
+                            <property name="text">
+                                <string>优先级</string>
+                            </property>
+                        </widget>
+                    </item>
+                    <item row="3" column="1">
+                        <widget class="QSpinBox" name="prioritySpinBox">
+                            <property name="minimum">
+                                <number>1</number>
+                            </property>
+                            <property name="maximum">
+                                <number>5</number>
+                            </property>
+                            <property name="value">
+                                <number>3</number>
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </item>
+            <item>
+                <widget class="QDialogButtonBox" name="buttonBox">
+                    <property name="standardButtons">
+                        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+                    </property>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+    <resources/>
+    <connections>
+        <connection>
+            <sender>buttonBox</sender>
+            <signal>accepted()</signal>
+            <receiver>AddReminderDialog</receiver>
+            <slot>accept()</slot>
+        </connection>
+        <connection>
+            <sender>buttonBox</sender>
+            <signal>rejected()</signal>
+            <receiver>AddReminderDialog</receiver>
+            <slot>reject()</slot>
+        </connection>
+    </connections>
+</ui> 

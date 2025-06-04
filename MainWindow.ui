@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>600</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>多功能管理系统</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QTabWidget" name="tabWidget">
+                        <!-- 财务标签页 -->
+                        <widget class="QWidget" name="financeTab">
+                            <attribute name="title">
+                                <string>账本管理</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="financeLayout">
+                                <item>
+                                    <layout class="QHBoxLayout" name="financeToolLayout">
+                                        <item>
+                                            <widget class="QLabel" name="label_yearMonth">
+                                                <property name="text">
+                                                    <string>选择月份：</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QDateEdit" name="yearMonthEdit">
+                                                <property name="displayFormat">
+                                                    <string>yyyy-MM</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="queryMonthBtn">
+                                                <property name="text">
+                                                    <string>月度查询</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="showStatisticsBtn">
+                                                <property name="text">
+                                                    <string>统计分析</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <spacer name="horizontalSpacer">
+                                                <property name="orientation">
+                                                    <enum>Qt::Horizontal</enum>
+                                                </property>
+                                                <property name="sizeHint" stdset="0">
+                                                    <size>
+                                                        <width>40</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item>
+                                    <widget class="QTableWidget" name="financeTable">
+                                        <property name="columnCount">
+                                            <number>3</number>
+                                        </property>
+                                        <column>
+                                            <property name="text">
+                                                <string>日期</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>金额</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>类别</string>
+                                            </property>
+                                        </column>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <layout class="QHBoxLayout" name="financeButtonLayout">
+                                        <item>
+                                            <widget class="QPushButton" name="addFinanceBtn">
+                                                <property name="text">
+                                                    <string>添加记录</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="exportFinanceBtn">
+                                                <property name="text">
+                                                    <string>导出数据</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                            </layout>
+                        </widget>
+                        <!-- 提醒标签页 -->
+                        <widget class="QWidget" name="reminderTab">
+                            <attribute name="title">
+                                <string>提醒管理</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="reminderLayout">
+                                <item>
+                                    <layout class="QHBoxLayout" name="reminderToolLayout">
+                                        <item>
+                                            <widget class="QLabel" name="label_date">
+                                                <property name="text">
+                                                    <string>选择日期：</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QDateEdit" name="reminderDateEdit">
+                                                <property name="calendarPopup">
+                                                    <bool>true</bool>
+                                                </property>
+                                                <property name="displayFormat">
+                                                    <string>yyyy-MM-dd</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="queryDateBtn">
+                                                <property name="text">
+                                                    <string>按日期查询</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <spacer name="horizontalSpacer_2">
+                                                <property name="orientation">
+                                                    <enum>Qt::Horizontal</enum>
+                                                </property>
+                                                <property name="sizeHint" stdset="0">
+                                                    <size>
+                                                        <width>40</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item>
+                                    <widget class="QTableWidget" name="reminderTable">
+                                        <property name="columnCount">
+                                            <number>4</number>
+                                        </property>
+                                        <column>
+                                            <property name="text">
+                                                <string>日期</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>时间</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>内容</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>优先级</string>
+                                            </property>
+                                        </column>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <layout class="QHBoxLayout" name="reminderButtonLayout">
+                                        <item>
+                                            <widget class="QPushButton" name="addReminderBtn">
+                                                <property name="text">
+                                                    <string>添加提醒</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="sortByTimeBtn">
+                                                <property name="text">
+                                                    <string>按时间排序</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="sortByPriorityBtn">
+                                                <property name="text">
+                                                    <string>按优先级排序</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="clearExpiredBtn">
+                                                <property name="text">
+                                                    <string>清理过期</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                            </layout>
+                        </widget>
+                        <!-- 密码标签页 -->
+                        <widget class="QWidget" name="passwordTab">
+                            <attribute name="title">
+                                <string>密码管理</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="passwordLayout">
+                                <item>
+                                    <layout class="QHBoxLayout" name="passwordToolLayout">
+                                        <item>
+                                            <widget class="QLabel" name="label_search">
+                                                <property name="text">
+                                                    <string>搜索：</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QLineEdit" name="searchEdit">
+                                                <property name="placeholderText">
+                                                    <string>输入网站名称搜索</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="searchBtn">
+                                                <property name="text">
+                                                    <string>搜索</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <spacer name="horizontalSpacer_3">
+                                                <property name="orientation">
+                                                    <enum>Qt::Horizontal</enum>
+                                                </property>
+                                                <property name="sizeHint" stdset="0">
+                                                    <size>
+                                                        <width>40</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item>
+                                    <widget class="QTableWidget" name="passwordTable">
+                                        <property name="columnCount">
+                                            <number>3</number>
+                                        </property>
+                                        <column>
+                                            <property name="text">
+                                                <string>网站</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>用户名</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>密码</string>
+                                            </property>
+                                        </column>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <layout class="QHBoxLayout" name="passwordButtonLayout">
+                                        <item>
+                                            <widget class="QPushButton" name="addPasswordBtn">
+                                                <property name="text">
+                                                    <string>添加密码</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="showPasswordBtn">
+                                                <property name="text">
+                                                    <string>显示密码</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="changePasswordBtn">
+                                                <property name="text">
+                                                    <string>修改密码</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                            </layout>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>800</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QStatusBar" name="statusbar"/>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
