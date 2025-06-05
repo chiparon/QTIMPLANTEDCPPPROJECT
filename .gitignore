@@ -1,0 +1,4 @@
+release/
+# Ignore Qt build artifacts
+*.dll
+*.exe 
