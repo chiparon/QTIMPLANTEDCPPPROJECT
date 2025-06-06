@@ -149,7 +149,7 @@ std::vector<const Record*> UnifiedManager::findRecordsByDate(const std::string& 
         if (auto* reminder = dynamic_cast<ReminderRecord*>(record.get())) {
             if (reminder->getDate() == date) {
                 result.push_back(record.get());
-            }
+        }
         }
     }
     return result;
@@ -214,7 +214,7 @@ void UnifiedManager::displaySortedReminders(bool sortByPriority) const
         std::cout << "内容: " << reminder->getContent() << std::endl;
         std::cout << "优先级: " << reminder->getPriority() << std::endl;
         std::cout << "------------------------" << std::endl;
-    }
+}
 }
 
 void UnifiedManager::displayMonthlyStatistics(const std::string& yearMonth) const {
@@ -275,7 +275,7 @@ void UnifiedManager::findPasswordByWebsite(const std::string& website) const {
                       << "用户名: " << password->getUsername() << "\n"
                       << "密码: " << decryptPassword(password->getPassword()) << "\n"
                       << "-------------------\n";
-        }
+    }
     } else {
         std::cout << "\n未找到匹配的网站记录。\n";
     }

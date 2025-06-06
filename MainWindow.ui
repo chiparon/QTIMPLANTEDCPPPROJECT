@@ -68,33 +68,33 @@
                                         </item>
                                     </layout>
                                 </item>
-                                <item>
-                                    <widget class="QTableWidget" name="financeTable">
-                                        <property name="columnCount">
-                                            <number>3</number>
-                                        </property>
-                                        <column>
-                                            <property name="text">
-                                                <string>日期</string>
-                                            </property>
-                                        </column>
-                                        <column>
-                                            <property name="text">
-                                                <string>金额</string>
-                                            </property>
-                                        </column>
-                                        <column>
-                                            <property name="text">
-                                                <string>类别</string>
-                                            </property>
-                                        </column>
-                                    </widget>
-                                </item>
+                <item>
+                    <widget class="QTableWidget" name="financeTable">
+                        <property name="columnCount">
+                            <number>3</number>
+                        </property>
+                        <column>
+                            <property name="text">
+                                <string>日期</string>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>金额</string>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>类别</string>
+                            </property>
+                        </column>
+                    </widget>
+                </item>
                                 <item>
                                     <layout class="QHBoxLayout" name="financeButtonLayout">
-                                        <item>
-                                            <widget class="QPushButton" name="addFinanceBtn">
-                                                <property name="text">
+                <item>
+                    <widget class="QPushButton" name="addFinanceBtn">
+                        <property name="text">
                                                     <string>添加记录</string>
                                                 </property>
                                             </widget>
@@ -304,7 +304,7 @@
                                             <widget class="QPushButton" name="changePasswordBtn">
                                                 <property name="text">
                                                     <string>修改密码</string>
-                                                </property>
+                        </property>
                                             </widget>
                                         </item>
                                     </layout>

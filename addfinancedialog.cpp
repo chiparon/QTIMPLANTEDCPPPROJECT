@@ -10,12 +10,14 @@
 #include "AddFinanceDialog.h"
 #include "addfinancedialog.h"
 #include "ui_addfinancedialog.h"
+#include <QDate>
 
 AddFinanceDialog::AddFinanceDialog(QWidget *parent)
     : QDialog(parent), ui(new Ui::AddFinanceDialog)
 {
     ui->setupUi(this);
     setWindowTitle("添加账本记录");
+    ui->dateEdit->setDate(QDate::currentDate());  // 设置当前日期为默认值
 }
 
 AddFinanceDialog::~AddFinanceDialog()
