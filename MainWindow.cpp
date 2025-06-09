@@ -492,3 +492,29 @@ void MainWindow::on_changePasswordBtn_clicked()
         }
     }
 }
+
+void MainWindow::on_deleteReminderBtn_clicked()
+{
+    // 获取选中的行
+    int row = ui->reminderTable->currentRow();
+    if (row < 0) {
+        QMessageBox::warning(this, "提示", "请先选择要删除的提醒记录");
+        return;
+    }
+
+    // 获取选中行的信息
+    QString date = ui->reminderTable->item(row, 0)->text();
+    QString time = ui->reminderTable->item(row, 1)->text();
+    QString content = ui->reminderTable->item(row, 2)->text();
+
+    // 确认删除
+    if (QMessageBox::question(this, "确认", "确定要删除这条提醒吗？") == QMessageBox::Yes) {
+        // 调用管理器删除记录
+        if (manager.deleteReminderRecord(date.toStdString(), time.toStdString(), content.toStdString())) {
+            QMessageBox::information(this, "提示", "删除成功");
+            refreshReminderTable(); // 刷新表格显示
+        } else {
+            QMessageBox::warning(this, "错误", "删除失败");
+        }
+    }
+}

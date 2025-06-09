@@ -423,4 +423,21 @@ std::string UnifiedManager::toLowercase(const std::string& str) {
     std::string lower = str;
     std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
     return lower;
+}
+
+bool UnifiedManager::deleteReminderRecord(const std::string& date, const std::string& time, const std::string& content) {
+    auto it = records.begin();
+    while (it != records.end()) {
+        if (auto* reminder = dynamic_cast<ReminderRecord*>(it->get())) {
+            if (reminder->getDate() == date && 
+                reminder->getTime() == time && 
+                reminder->getContent() == content) {
+                it = records.erase(it);
+                saveAllRecords(); // 保存更改
+                return true;
+            }
+        }
+        ++it;
+    }
+    return false; // 未找到匹配的记录
 } 

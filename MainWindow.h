@@ -34,6 +34,7 @@ private slots:
     void on_sortByTimeBtn_clicked();
     void on_sortByPriorityBtn_clicked();
     void on_clearExpiredBtn_clicked();
+    void on_deleteReminderBtn_clicked();
 
     // 密码功能
     void on_addPasswordBtn_clicked();

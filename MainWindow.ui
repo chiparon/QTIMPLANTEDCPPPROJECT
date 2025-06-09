@@ -214,6 +214,13 @@
                                                 </property>
                                             </widget>
                                         </item>
+                                        <item>
+                                            <widget class="QPushButton" name="deleteReminderBtn">
+                                                <property name="text">
+                                                    <string>删除提醒</string>
+                                                </property>
+                                            </widget>
+                                        </item>
                                     </layout>
                                 </item>
                             </layout>

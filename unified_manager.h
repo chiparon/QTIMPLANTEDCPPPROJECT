@@ -51,6 +51,7 @@ public:
     void clearExpiredReminders();
     bool updatePassword(const std::string& website, const std::string& username,
                        const std::string& oldPassword, const std::string& newPassword);
+    bool deleteReminderRecord(const std::string& date, const std::string& time, const std::string& content);
     
     // 获取所有记录
     const std::vector<std::unique_ptr<Record>>& getRecords() const { return records; }
